@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                                     child: Text('Entrar'),
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
