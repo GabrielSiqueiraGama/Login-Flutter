@@ -6,8 +6,9 @@ void main() {
   runApp(MyApp());
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  Color _primaryColor = HexColor('#DC54FE');
+  final Color _primaryColor = HexColor('#6959CD');
 
   MyApp({Key? key}) : super(key: key);
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Perfil do usuario',
       theme: ThemeData(
         primaryColor: _primaryColor,
