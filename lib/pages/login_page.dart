@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perfil_user/common/theme_helper.dart';
 import 'package:perfil_user/pages/widgets/header_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -10,7 +11,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final double _alturaHeader = 250;
-  final Key _formkey = GlobalKey<FormState>();
+  final Key _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +25,37 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SafeArea(
               child: Column(
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     "Olá",
                     style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(
-                    height: 15,
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Form(
+                    key: _formKey,
+                    child: Column(
+                      children: [
+                        TextField(
+                          decoration: ThemeHelper().textInputDecoration(
+                              "Nome do usuario.",
+                              "Digite seu nome de usuario."),
+                        ),
+                        const SizedBox(height: 30),
+                        TextField(
+                          obscureText: true,
+                          decoration: ThemeHelper().textInputDecoration(
+                              "Senha:", "Digite sua senha:"),
+                        ),
+                        const SizedBox(height: 15),
+                        const Text('Entrar'),
+                        const SizedBox(height: 15),
+                        const Text('Criar conta'),
+                        const SizedBox(height: 15),
+                        const Text('Esqueceu sua senha?'),
+                      ],
+                    ),
                   ),
                 ],
               ),
