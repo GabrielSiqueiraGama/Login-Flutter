@@ -20,9 +20,9 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
       body: SingleChildScrollView(
           child: Column(
         children: [
-          Container(
+          const SizedBox(
             height: 300,
-            child: const HeaderWidget(300, true, Icons.password_rounded),
+            child: HeaderWidget(300, true, Icons.password_rounded),
           ),
           SafeArea(
             child: Container(
@@ -66,23 +66,19 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                       key: _formKey,
                       child: Column(
                         children: <Widget>[
-                          Container(
-                            child: Container(
-                              child: TextFormField(
-                                decoration: ThemeHelper().textInputDecoration(
-                                    "Email", "Digite seu email"),
-                                validator: (val) {
-                                  if (val!.isEmpty) {
-                                    return "Email não pode estar vazio";
-                                  } else if (!RegExp(
-                                          r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$")
-                                      .hasMatch(val)) {
-                                    return "Coloque um email valido";
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),
+                          TextFormField(
+                            decoration: ThemeHelper().textInputDecoration(
+                                "Email", "Digite seu email"),
+                            validator: (val) {
+                              if (val!.isEmpty) {
+                                return "Email não pode estar vazio";
+                              } else if (!RegExp(
+                                      r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$")
+                                  .hasMatch(val)) {
+                                return "Coloque um email valido";
+                              }
+                              return null;
+                            },
                           ),
                           const SizedBox(height: 40.0),
                           Container(

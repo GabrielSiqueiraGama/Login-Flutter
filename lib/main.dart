@@ -8,7 +8,7 @@ void main() {
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  final Color _primaryColor = HexColor('#6959CD');
+  final Color _primaryColor = HexColor('#00FA9A');
 
   MyApp({Key? key}) : super(key: key);
 
