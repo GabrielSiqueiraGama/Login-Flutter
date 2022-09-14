@@ -147,7 +147,8 @@ class _PaginaRegistroState extends State<PaginaRegistro> {
                             onPressed: () {
                               Navigator.of(context).pushAndRemoveUntil(
                                   MaterialPageRoute(
-                                      builder: (context) => PaginaPerfil()),
+                                      builder: (context) =>
+                                          const PaginaPerfil()),
                                   (Route<dynamic> route) => false);
                             },
                           ),

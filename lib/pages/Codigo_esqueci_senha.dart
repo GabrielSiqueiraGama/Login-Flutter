@@ -126,7 +126,8 @@ class _CodigoEsqueciSenhaState extends State<CodigoEsqueciSenha> {
                               ? () {
                                   Navigator.of(context).pushAndRemoveUntil(
                                       MaterialPageRoute(
-                                          builder: (context) => PaginaPerfil()),
+                                          builder: (context) =>
+                                              const PaginaPerfil()),
                                       (Route<dynamic> route) => false);
                                 }
                               : null,

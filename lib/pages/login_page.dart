@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                PaginaPerfil()));
+                                                const PaginaPerfil()));
                                   },
                                 )),
                             const SizedBox(height: 15),
@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    PaginaRegistro()));
+                                                    const PaginaRegistro()));
                                       },
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      EsqueciSenha()));
+                                                      const EsqueciSenha()));
                                         })
                                 ]),
                               ),

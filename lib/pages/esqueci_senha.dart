@@ -104,7 +104,7 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            CodigoEsqueciSenha()),
+                                            const CodigoEsqueciSenha()),
                                   );
                                 }
                               },
