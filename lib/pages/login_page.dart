@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:perfil_user/common/theme_helper.dart';
+import 'package:perfil_user/pages/esqueci_senha.dart';
 import 'package:perfil_user/pages/pagina_perfil.dart';
 import 'package:perfil_user/pages/pagina_registro.dart';
 import 'package:perfil_user/pages/widgets/header_widget.dart';
@@ -96,7 +97,23 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             const SizedBox(height: 15),
-                            const Text('Esqueceu sua senha?'),
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+                              child: Text.rich(
+                                TextSpan(children: [
+                                  TextSpan(
+                                      text: 'Esqueceu a senha.',
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      EsqueciSenha()));
+                                        })
+                                ]),
+                              ),
+                            ),
                           ],
                         ),
                       )),

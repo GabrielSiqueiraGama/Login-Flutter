@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:perfil_user/pages/esqueci_senha.dart';
 import 'package:perfil_user/pages/login_page.dart';
+import 'package:perfil_user/pages/pagina_registro.dart';
 import 'package:perfil_user/pages/tela_abertura.dart';
 import 'package:perfil_user/pages/widgets/header_widget.dart';
 
@@ -113,6 +115,44 @@ class _PaginaPerfil extends State<PaginaPerfil> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => const LoginPage(),
+                        ),
+                      );
+                    }),
+                ListTile(
+                    leading: Icon(
+                      Icons.accessibility,
+                      size: 24,
+                      color: Colors.purple.shade400,
+                    ),
+                    title: Text(
+                      "Tela de cadastro.",
+                      style: TextStyle(
+                          fontSize: 17, color: Colors.purple.shade400),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PaginaRegistro(),
+                        ),
+                      );
+                    }),
+                ListTile(
+                    leading: Icon(
+                      Icons.accessibility,
+                      size: 24,
+                      color: Colors.purple.shade400,
+                    ),
+                    title: Text(
+                      "Esqueci a senha.",
+                      style: TextStyle(
+                          fontSize: 17, color: Colors.purple.shade400),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const EsqueciSenha(),
                         ),
                       );
                     }),
