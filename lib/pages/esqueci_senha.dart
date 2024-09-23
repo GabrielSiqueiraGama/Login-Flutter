@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:perfil_user/common/theme_helper.dart';
-import 'package:perfil_user/pages/Codigo_esqueci_senha.dart';
+import 'package:perfil_user/pages/codigo_esqueci_senha.dart';
 import 'package:perfil_user/pages/widgets/header_widget.dart';
 
 class EsqueciSenha extends StatefulWidget {
@@ -33,10 +33,10 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                   Container(
                     alignment: Alignment.topLeft,
                     margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Esqueceu a senha',
                           style: TextStyle(

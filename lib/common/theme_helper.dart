@@ -54,7 +54,7 @@ class ThemeHelper {
       actions: [
         TextButton(
           style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.black38)),
+              backgroundColor: WidgetStateProperty.all(Colors.black38)),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -69,13 +69,13 @@ class ThemeHelper {
 
   ButtonStyle buttonStyle() {
     return ButtonStyle(
-      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
       ),
-      backgroundColor: MaterialStateProperty.all(Colors.transparent),
-      shadowColor: MaterialStateProperty.all(Colors.transparent),
+      backgroundColor: WidgetStateProperty.all(Colors.transparent),
+      shadowColor: WidgetStateProperty.all(Colors.transparent),
     );
   }
 }

@@ -1,6 +1,6 @@
 // This widget will draw header section of all page. Wich you will get with the project source code.
 
-// ignore_for_file: prefer_final_fields
+// ignore_for_file: prefer_final_fields, no_logic_in_create_state
 
 import 'package:flutter/material.dart';
 
@@ -13,6 +13,7 @@ class HeaderWidget extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HeaderWidgetState createState() =>
       _HeaderWidgetState(_height, _showIcon, _icon);
 }

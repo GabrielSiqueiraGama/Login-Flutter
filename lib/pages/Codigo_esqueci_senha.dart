@@ -39,10 +39,10 @@ class _CodigoEsqueciSenhaState extends State<CodigoEsqueciSenha> {
                       Container(
                         alignment: Alignment.topLeft,
                         margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                        child: Column(
+                        child: const Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Verificação",
                               style: TextStyle(
